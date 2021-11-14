@@ -62,7 +62,7 @@ jobs:
     # Prepare release files from BUILD directory
     - name: Prepare release files
       run: |
-        cd BUILD && tar -zcf ../release-$GITHUB_REF.tar.gz . && cd ..
+        cd BUILD && tar -zcf ../release-$GITHUB_REF_NAME.tar.gz . && cd ..
 
     # Release files
     - name: Release
@@ -71,4 +71,4 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         files: |
-          release-$GITHUB_REF.tar.gz
+          release-$GITHUB_REF_NAME.tar.gz
