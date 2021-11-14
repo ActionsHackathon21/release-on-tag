@@ -1,5 +1,10 @@
 name: "Release on tag"
 
+env:
+  TELEGRAM_CHANNEL: '@mphamzzz_channel'
+  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
+
 on:
   push:
     tags:
@@ -72,3 +77,12 @@ jobs:
         prerelease: false
         files: |
           release-${{ github.ref_name }}.tar.gz
+
+    # Notify on Telegram channel
+    - name: Telegram announcement
+      run: |
+        curl -G \
+        --data-urlencode "chat_id=$TELEGRAM_CHANNEL" \
+        --data-urlencode "text=Version $GITHUB_REF_NAME released! https://github.com/$GITHUB_REPOSITORY/releases/tag/$GITHUB_REF_NAME" \
+        https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
+
