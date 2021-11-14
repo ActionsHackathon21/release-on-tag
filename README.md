@@ -46,3 +46,5 @@ In this repository, I use a sample [NextJS](https://nextjs.org/) to demonstrate.
 
 ## Pre-release
 There is also a pre-release workflow ([prerelease-on-push.yml](.github/workflows/prerelease-on-push.yml)), which will build and create a pre-release version of your application, on every push to `main` branch.
+
+![Screenshot](https://github.com/ActionsHackathon21/release-on-tag/raw/main/screenshot3.png)
