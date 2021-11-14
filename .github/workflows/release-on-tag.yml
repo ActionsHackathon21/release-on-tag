@@ -1,8 +1,8 @@
 name: "Release on tag"
 
 env:
-  TELEGRAM_CHANNEL: '@mphamzzz_channel'
-  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+  TELEGRAM_CHANNEL: '@mphamzzz_channel' # Configure the Telegram channel
+  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }} # Configure the Telegram bot token
 
 
 on:
