@@ -71,4 +71,4 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         files: |
-          release-$GITHUB_REF_NAME.tar.gz
+          release-${{ env.GITHUB_REF_NAME }}.tar.gz
