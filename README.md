@@ -42,3 +42,7 @@ In this repository, I use a sample [NextJS](https://nextjs.org/) to demonstrate.
 - Prepare release build files
 - Release the prepared files into Github Release
 - Send an announcement to the specified Telegram channel
+
+
+## Pre-release
+There is also a pre-release workflow ([prerelease-on-push.yml](.github/workflows/prerelease-on-push.yml)), which will build and create a pre-release version of your application, on every push to `main` branch.
