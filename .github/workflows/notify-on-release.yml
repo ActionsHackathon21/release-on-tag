@@ -27,8 +27,6 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.envPAT }}
 
     # Notify on Telegram channel
     - name: Telegram announcement
