@@ -9,6 +9,10 @@ on:
   release:
     types:
       - released
+  workflow_call:
+    secrets:
+      envPAT:
+        required: true
 
 jobs:
   build-release:
@@ -17,6 +21,11 @@ jobs:
 
 
     steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.envPAT }}
 
     # Notify on Telegram channel
     - name: Telegram announcement
