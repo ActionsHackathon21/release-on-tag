@@ -6,11 +6,6 @@ on:
 
 jobs:
   build-release:
-    # Call notify workflow
-    uses: ./.github/workflows/notify-on-release.yml
-    secrets:
-      envPAT: ${{ secrets.envPAT }}
-
     name: "Build & Pre-release"
     runs-on: ubuntu-latest
 
