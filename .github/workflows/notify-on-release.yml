@@ -12,11 +12,13 @@ on:
   workflow_run:
     workflows:
       - "Pre-release on push"
+    branches:
+      - main
     types:
       - completed
 
 jobs:
-  build-release:
+  notify:
     name: "Notify on Telegram"
     runs-on: ubuntu-latest
 
