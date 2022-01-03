@@ -23,7 +23,7 @@ const Page = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Hello, {name}!!!
+          Hello! {name}!!!
         </h1>
       </main>
 
