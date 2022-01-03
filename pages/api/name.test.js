@@ -2,7 +2,7 @@ import { createMocks } from 'node-mocks-http'
 import nameApi from 'pages/api/name'
 
 describe('/api/name', () => {
-  test('returns a message with the specified animal', async () => {
+  test('api.name returns a message', async () => {
     const { req, res } = createMocks({
       method: 'GET',
       query: {
