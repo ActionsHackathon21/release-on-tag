@@ -9,10 +9,11 @@ on:
   release:
     types:
       - released
-  workflow_call:
-    secrets:
-      envPAT:
-        required: true
+  workflow_run:
+    workflows:
+      - "Pre-release on push"
+    types:
+      - completed
 
 jobs:
   build-release:

@@ -72,9 +72,3 @@ jobs:
         prerelease: false
         files: |
           release-${{ github.ref_name }}.tar.gz
-
-    # Call notify workflow
-    - name: Notify
-      uses: ./.github/workflows/notify-on-release.yml
-      secrets:
-        envPAT: ${{ secrets.envPAT }}
